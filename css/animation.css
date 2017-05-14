@@ -1,0 +1,106 @@
+/* CSS ANIMATION */
+
+/* 3D transformation on an element (using perspective)*/
+  @keyframes spinner {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(-360deg);
+    }
+}
+#stage {
+    margin: 1em auto;
+    perspective: 1000px;    
+}
+#spinner {
+    animation-name: spinner;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    transform-style: preserve-3d;
+}
+#spinner:hover {
+    animation-play-state: paused;
+}
+
+/* =======   3D text shadow   ===========*/
+.mainCon {
+ font: 40pt Arial;
+ color:#FF0000;
+ text-shadow: 0 15px 0 #ccc,
+ 0 6px 1px rgba(0,0,0,.1),
+ 0 0 5px rgba(0,0,0,.1),
+ 0 1px 3px rgba(0,0,0,.3),
+ 0 3px 5px rgba(0,0,0,.2),
+ 0 5px 10px rgba(0,0,0,.25),
+ 0 10px 10px rgba(0,0,0,.2),
+ 0 20px 20px rgba(0,0,0,.15);
+}
+
+/* === 1 second transition of an element's properties from one state to 
+the next when hovered === */
+.changePic{
+	transition: 1s ease-in-out;
+}
+.changePic:hover {
+	transform: scale(1.2);
+}
+
+
+
+/* =======    An @keyframe animation. This animation 
+is using percentage values in the animation syntax. ===========*/
+.wrapper {
+  animation: pulse 25s;
+}
+
+@keyframes pulse {
+  30% {
+    background-color: pink;
+  }
+  70% {
+    background-color: #B4EEB4;
+  }
+}
+
+/*====== one internal element of an SVG element on hover or via 
+other animation technique. === */
+
+#trailSign{
+  transition: 1s;
+
+}
+
+#trailSign:hover {
+  transform: scale(1.1);
+}
+
+#trailSign:hover #StemYellow {
+  fill: #8B2323;
+}
+
+ #TrailYellowPlaque:hover {
+ fill: #008B00; 
+}
+
+#HomeYellowPlaque:hover {
+ fill: #008B00; 
+}
+
+#HomeBlack:hover{
+ fill: #fff; 
+}
+
+#TrailBlack:hover{
+ fill: #fff; 
+}
+
+
+
+
+
+
+
+
+
